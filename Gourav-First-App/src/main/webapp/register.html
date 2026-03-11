@@ -1,0 +1,95 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Register Page</title>
+<link rel="stylesheet" href="register.css">
+</head>
+<body>
+<form action="RegisterServlet" method="post">
+        <h1>Register Page</h1> 
+        <label>First Name :</label>
+        <input type="text" required name="fName_k" placeholder="First Name">
+        <br>
+        <label>Last Name :</label>
+        <input type="text" required name="lName_k" placeholder="Last Name">
+        <br>
+        <label>Mobile Number :</label>
+        <input type="text" required name="mob_k" placeholder="Mobile Number">
+        <br>
+        <label>Email Address :</label>
+        <input type="email" required name="email_k" placeholder="Email Address">
+        <br>
+        <label>Password :</label>
+        <input type="password" required name="password_k" placeholder="Password">
+        <br>
+        <button type="submit">Register Now</button>
+ </form>
+</body>
+</html>
+ -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Register Page</title>
+<link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+<form action="RegisterServlet" method="post">
+        <h1>Register Page</h1> 
+        
+        <p id="messageBox"></p>
+
+        <label>First Name :</label>
+        <input type="text" required name="fName_k" placeholder="First Name">
+        
+        <label>Last Name :</label>
+        <input type="text" required name="lName_k" placeholder="Last Name">
+        
+        <label>Mobile Number :</label>
+        <input type="text" required name="mob_k" placeholder="Mobile Number">
+        
+        <label>Email Address :</label>
+        <input type="email" required name="email_k" placeholder="Email Address">
+        
+        <label>Password :</label>
+        <input type="password" required name="password_k" placeholder="Password">
+        
+        <button type="submit">Register Now</button>
+</form>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+const error = params.get("error");
+const success = params.get("success");
+
+const messageBox = document.getElementById("messageBox");
+
+if (error) {
+    messageBox.style.color = "red";
+    messageBox.innerText = error;
+}
+
+if (success) {
+    messageBox.style.color = "green";
+    messageBox.innerText = success;
+}
+
+setTimeout(() => {
+    messageBox.innerText = "";
+}, 4000);
+</script>
+
+</body>
+</html>
+
+
+
+ 

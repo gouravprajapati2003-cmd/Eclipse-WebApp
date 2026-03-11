@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>OTP Verification</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #74b9ff, #a29bfe);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .otp-container {
+        background-color: #fff;
+        padding: 40px 50px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 350px;
+        transition: transform 0.3s ease;
+    }
+
+    .otp-container:hover {
+        transform: scale(1.03);
+    }
+
+    h1 {
+        text-align: center;
+        color: #2d3436;
+        margin-bottom: 25px;
+        font-size: 26px;
+        letter-spacing: 1px;
+    }
+
+    label {
+        font-size: 18px;
+        color: #2d3436;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #dfe6e9;
+        border-radius: 8px;
+        font-size: 16px;
+        outline: none;
+        transition: 0.3s;
+    }
+
+    input[type="text"]:focus {
+        border-color: #0984e3;
+        box-shadow: 0 0 8px rgba(9, 132, 227, 0.3);
+    }
+
+    button {
+        margin-top: 20px;
+        background-color: #0984e3;
+        color: white;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background-color: #74b9ff;
+    }
+
+    p.note {
+        font-size: 14px;
+        color: #636e72;
+        margin-top: 15px;
+    }
+</style>
+</head>
+<body>
+    <div class="otp-container">
+        <h1>OTP VERIFICATION</h1>
+        <form action="VerifyOTPServlet" method="post">
+            <label>Enter OTP :</label>
+            <input type="text" placeholder="Please enter the OTP*" name="userOTP" required>
+            <button type="submit">Submit OTP</button>
+        </form>
+        <p class="note">Didn’t receive the code? <a href="#" style="color:#0984e3; text-decoration:none;">Resend OTP</a></p>
+    </div>
+</body>
+</html>
