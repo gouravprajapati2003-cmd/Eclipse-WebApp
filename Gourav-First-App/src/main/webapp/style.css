@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/* General page styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #74ABE2, #5563DE);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* Form container */
+form {
+    background: #ffffff;
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+}
+
+/* Title */
+form h1 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Label styling */
+label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Input fields */
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+/* Focus effect */
+input:focus {
+    border-color: #5563DE;
+    box-shadow: 0 0 5px rgba(85, 99, 222, 0.3);
+}
+
+/* Button styling */
+button {
+    margin-top: 25px;
+    width: 100%;
+    padding: 12px;
+    background-color: #5563DE;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Button hover */
+button:hover {
+    background-color: #3f4ac0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+    form {
+        width: 90%;
+        padding: 30px;
+    }
+}
